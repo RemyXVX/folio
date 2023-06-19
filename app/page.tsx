@@ -1,15 +1,17 @@
+'use client'
+
 import React from "react";
-import Navbar from "./components/navbar";
-import About from "./components/about";
-import Contacts from "./components/contact";
+import Secondary from "./components/page";
 
 const Main = () => {
+
+
   return (
-    <main>
-      <About />
-      <Contacts />
-      <Navbar />
-    </main>
+    <>
+    <div>
+      <Secondary />
+    </div>
+    </>
   )
 }
 

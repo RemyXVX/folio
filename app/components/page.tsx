@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import Navbar from "./navbar";
-import About from "./about";
-import Contacts from "./contact/contact";
 import Image from "next/image";
 import underConstructImage from "./../../public/underconstruct.png"
 
@@ -28,13 +26,11 @@ const Secondary = () => {
             onClick={buttonClickBack}
             className="px-4 py-2 font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600"
           >The Void</button>
-          <About />
-          <Contacts />
           <Navbar />
           </div>
         ) : (
           <div className="grid justify-center">
-            <div className="text-center mt-10">
+            <div className="text-center mt-3.5">
               <h1 className="font-extrabold text-6xl text-violet-400">Under construction</h1>
               <p className="mt-10 font-bold text-violet-400">Will have something rad for you very soon!</p>
             </div>

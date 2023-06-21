@@ -1,5 +1,3 @@
-'use client'
-
 import React from "react";
 import Secondary from "./components/page";
 
@@ -7,11 +5,11 @@ const Main = () => {
 
 
   return (
-    <>
-    <div>
-      <Secondary />
-    </div>
-    </>
+    <main>
+      <div className="border border-black p-4 md:p-8 lg:p-12">
+        <Secondary />
+      </div>
+    </main>
   )
 }
 

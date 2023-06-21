@@ -1,0 +1,13 @@
+/* #underconstruct {
+  max-width: 375px;
+  max-height: 667px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 375px) {
+    #underconstruct{
+    max-width: 100%;
+    max-height: 100%;
+  }
+} */

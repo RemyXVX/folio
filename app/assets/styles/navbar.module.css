@@ -1,0 +1,25 @@
+#navbar {
+  position: sticky;
+  top: 0;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.98;
+  box-shadow: 0px 1px 10px #999;
+  z-index: 999; /* Add this line to ensure the menu is on top */
+}
+
+nav#navbar {
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    width: 100%;
+  }
+
+  nav#navbar {
+    margin-bottom: 0; /* Adjust this to your desired margin */
+  }
+}

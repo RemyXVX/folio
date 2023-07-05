@@ -1,5 +1,5 @@
 import React from "react";
-import Secondary from "./components/page";
+import Secondary from "./pages/page";
 
 const Main = () => {
 

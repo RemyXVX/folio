@@ -10,7 +10,7 @@ h1.helloworld {
 .helloworld {
   text-align: center;
   vertical-align: middle;
-
+  
   color: transparent;
   background: conic-gradient(
     #000000 0%,

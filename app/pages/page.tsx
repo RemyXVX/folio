@@ -26,8 +26,7 @@ const Secondary = () => {
                 <Image
                   src={itsMeImage}
                   alt="Artificial Intelligence made self portrait of me, a very brown person with long flowly hair and some dark rim glasses"
-                  width={600}
-                  height={200}
+                  priority={true}
                   className="mx-auto rounded-full"
                 />
               </div>

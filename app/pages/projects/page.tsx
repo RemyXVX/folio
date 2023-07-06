@@ -2,11 +2,12 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <React.Fragment>
+    <>
+      <div className="text-left">Projects</div>
       <div id="projects">
-        Projects to come!
+        <h1>Projects to come!</h1>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

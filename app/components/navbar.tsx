@@ -14,12 +14,12 @@ const menuList = [
     href: "/#about",
   },
   {
-    text: "Contact",
-    href: "/#contact",
-  },
-  {
     text: "Projects",
     href: "/#projects",
+  },
+  {
+    text: "Contact",
+    href: "/#contact",
   },
 ];
 

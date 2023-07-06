@@ -3,16 +3,19 @@ import React from 'react';
 const Form = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-4">FormSubmit Demo</h1>
+      <div className="pb-2">
+        <h1 className="text-4xl font-bold">Contact:</h1>
+        <p className="text-xl font-light pb-2">shoot my line, or tell me a secret</p>
+      </div>
       <form
         target="_blank"
         action="https://formsubmit.co/test.email.remyflores@gmail.com"
         method="POST"
-        className="max-w-sm mx-auto"
+        className="max-w-2xl mx-auto"
       >
         <div className="mb-4">
-          <div className="flex space-x-4">
-            <div className="w-1/2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
               <input
                 type="text"
                 name="name"
@@ -21,7 +24,7 @@ const Form = () => {
                 required
               />
             </div>
-            <div className="w-1/2">
+            <div>
               <input
                 type="email"
                 name="email"
@@ -37,7 +40,7 @@ const Form = () => {
             placeholder="Your Message"
             className="w-full px-4 py-2 border border-gray-300 rounded-md"
             name="message"
-            rows={10} // Update the rows prop to a numeric value
+            rows={10}
             required
           ></textarea>
         </div>

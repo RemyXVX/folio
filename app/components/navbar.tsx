@@ -54,7 +54,7 @@ const Navbar = () => {
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-300 focus:text-gray-300 rounded-lg md:hidden hover:bg-rose-200 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-100"
           aria-controls="navbar-solid-bg"
-          aria-expanded={isMenuOpen}
+          aria-expanded={isMenuOpen ? 'true' : 'false'}
         >
           <span className="sr-only">Open main menu</span>
           <svg

@@ -4,7 +4,7 @@ import TechStack from "./TechStack";
 const About = () => {
   return (
     <>
-    <div className="text-left" id="about">About Me</div>
+    <div className="text-left" id="about" />
     <div>
       <div className="mt-14">
         <div className="max-w-3xl mx-auto px-1 py-1 sm:py-2 md:py-3">

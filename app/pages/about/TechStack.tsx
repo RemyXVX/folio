@@ -12,11 +12,11 @@ const TechStack = () => {
     'Redux',
     'Prisma',
     'Entity',
-    'PostgreSQL',
+    'Postgres',
     'MySQL',
-    'TypeScript',
-    'JavaScript',
-    'C-Sharp',
+    'TS',
+    'JS',
+    'C#',
     'CSS',
     'HTML',
   ];
@@ -26,8 +26,9 @@ const TechStack = () => {
       {techStack.map((tech, index) => (
         <button
           key={index}
-          className="bg-slate-500 bg-opacity-90 text-rose-200 hover:bg-slate-300 hover:text-rose-300 px-2 py-3 text-center font-medium rounded-md"
+          className="bg-slate-500 bg-opacity-90 text-rose-200 hover:bg-slate-300 hover:text-rose-300 px-3 py-2 text-center font-medium rounded-md whitespace-nowrap overflow-hidden"
           disabled
+          style={{ maxWidth: '100%', textOverflow: 'ellipsis' }}
         >
           {tech}
         </button>

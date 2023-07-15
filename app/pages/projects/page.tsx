@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSwipeable } from 'react-swipeable';
-
+import Pizzapalo from './pizzapalo';
+import Distro from './distro';
 
 const Projects = () => {
   const images = [
@@ -29,26 +30,15 @@ const Projects = () => {
   });
 
   return (
-    <div className="relative" {...handlers}>
-      <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2"
-        onClick={prevImage}
-      >
-        Previous
-      </button>
-
-      <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2"
-        onClick={nextImage}
-      >
-        Next
-      </button>
-
-      <img
-        src={images[currentImageIndex]}
-        alt="carousel image"
-        className="mx-auto"
-      />
+    <div className="grid grid-cols-2 gap-4">
+      <div>
+        <Distro />
+        <p className="text-xl">Distro Project Description</p>
+      </div>
+      <div>
+        <Pizzapalo />
+        <p className="text-xl">Pizzapalo Project Description</p>
+      </div>
     </div>
   );
 };

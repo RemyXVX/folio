@@ -7,19 +7,19 @@ import navbar from "./../assets/styles/navbar.module.css";
 const menuList = [
   {
     text: "Home",
-    href: "./#home",
+    href: "#home",
   },
   {
     text: "About",
-    href: "./#about",
+    href: "#about",
   },
   {
     text: "Projects",
-    href: "./#projects",
+    href: "#projects",
   },
   {
     text: "Contact",
-    href: "./#contact",
+    href: "#contact",
   },
 ];
 

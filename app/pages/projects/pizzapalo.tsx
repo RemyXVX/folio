@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSwipeable } from 'react-swipeable';
+import Image from 'next/image';
 
-import pizzaPage from "./../../assets/images/pizzacarousel/pizzalandingpage.jpg"
-import menu1 from "./../../assets/images/pizzacarousel/pizzamenu1.jpg"
-import menu2 from "./../../assets/images/pizzacarousel/pizzamenu2.jpg"
-import pizzaContact from "./../../assets/images/pizzacarousel/pizzacontact.jpg"
-import pizzaOrder from "./../../assets/images/pizzacarousel/pizzaordering.jpg"
+import pizzaPage from "../../assets/images/pizzacarousel/pizzalandingpage.jpg";
+import menu1 from "../../assets/images/pizzacarousel/pizzamenu1.jpg";
+import menu2 from "../../assets/images/pizzacarousel/pizzamenu2.jpg";
+import pizzaContact from "../../assets/images/pizzacarousel/pizzacontact.jpg";
+import pizzaOrder from "../../assets/images/pizzacarousel/pizzaordering.jpg";
 
 const Pizzapalo = () => {
   const images = [
@@ -38,24 +39,28 @@ const Pizzapalo = () => {
   return (
     <div className="relative" {...handlers}>
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
         onClick={prevImage}
       >
         Previous
       </button>
 
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
         onClick={nextImage}
       >
         Next
       </button>
 
-      <img
-        src={images[currentImageIndex].src}
-        alt="carousel image"
-        className="mx-auto"
-      />
+      <div className="mx-auto">
+        <Image
+          src={images[currentImageIndex]}
+          alt="carousel image"
+          layout="responsive"
+          width={600}
+          height={400}
+        />
+      </div>
     </div>
   );
 };

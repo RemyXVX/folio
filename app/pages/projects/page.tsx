@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import Pizzapalo from './pizzapalo';
 import Distro from './distro';

@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Form = () => {
+  const email = process.env.NEXT_PUBLIC_EMAIL_REMY;
+
   return (
     <div className="container mx-auto">
       <div className="pb-2">
@@ -9,7 +11,7 @@ const Form = () => {
       </div>
       <form
         target="_blank"
-        action="https://formsubmit.co/test.email.remyflores@gmail.com"
+        action={`${email}`}
         method="POST"
         className="max-w-2xl mx-auto"
       >

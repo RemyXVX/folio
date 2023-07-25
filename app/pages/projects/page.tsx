@@ -38,7 +38,7 @@ const Projects = () => {
               </p>
             </div>
             <div className="mt-4">
-              <a href="https://github.com/RemyXVX/pizzashop" className="text-rose-200 font-bold bg-slate-400 hover:bg-slate-300 py-2 px-4 rounded-md">
+              <a href="https://github.com/RemyXVX/pizzashop" className="text-rose-200 font-bold bg-slate-500 hover:bg-slate-300 hover:text-rose-300 py-2 px-4 rounded-md">
                 Click me
               </a>
             </div>
@@ -54,7 +54,7 @@ const Projects = () => {
               </p>
             </div>
             <div className="mt-4">
-              <a href="https://github.com/RemyXVX/Doomed-Coffe-Shop" className="text-rose-200 font-bold bg-slate-400 hover:bg-slate-300 py-2 px-4 rounded-md">
+              <a href="https://github.com/RemyXVX/Doomed-Coffe-Shop" className="text-rose-200 font-bold bg-slate-500 hover:bg-slate-300 hover:text-rose-300 py-2 px-4 rounded-md">
                 Click me
               </a>
             </div>

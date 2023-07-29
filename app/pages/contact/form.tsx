@@ -2,6 +2,7 @@ import React from 'react';
 
 const Form = () => {
   const email = "https://formsubmit.co/1ec482839cb75df9cc55985f43f6d4e7"
+  const redirectUrl = "https://remyxvx.github.io/folio/"
 
   return (
     <div className="container mx-auto">
@@ -15,6 +16,7 @@ const Form = () => {
         method="POST"
         className="max-w-2xl mx-auto"
       >
+        <input type="hidden" name="_url" value={redirectUrl} />
         <div className="mb-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>

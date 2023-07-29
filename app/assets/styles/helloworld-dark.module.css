@@ -1,36 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-h1.helloworld {
+.helloworld-dark {
   font-family: 'Poppins', sans-serif;
   font-size: 25vmin;
   line-height: 20vmin;
-  text-shadow: inset 0 5px 8px rgba(0, 0, 0, 0.5), 5px 0 10px rgba(0, 0, 0, 0.5), -2px 0 4px rgba(0, 0, 0, 0.5);
-}
+  text-shadow: inset 0 5px 8px rgba(255, 255, 255, 0.5), 5px 0 10px rgba(255, 255, 255, 0.5), -2px 0 4px rgba(255, 255, 255, 0.5);
 
-.helloworld {
   text-align: center;
   vertical-align: middle;
-  
+
   color: transparent;
   background: conic-gradient(
     #000000 0%,
-    #707070 10%,
-    #FF69B4 10%,
+    #cc6576 10%,
+    #6e66d6 10%,
     #FFC0CB 30%,
-    #DBB2D9 30%,
-    #AEC6CF 50%,
-    #B5DEFF 50%,
-    #F7D1BA 70%,
-    #B9D3B0 70%,
-    #B9D3B0 90%,
-    #000000 90%
+    #4573a7 30%,
+    #ade4e4 50%,
+    #6b6be2 50%,
+    #7d72be 70%,
+    #bd6996 70%,
+    #7aa9c9 95%,
+    #7ff1f1 100%
   );
   background-size: 60%;
   background-clip: text;
   -webkit-background-clip: text;
-
   animation: expand-rev 0.9s ease forwards;
-
   cursor: pointer;
 }
 
@@ -43,8 +39,7 @@ h1.helloworld {
   }
 }
 
-
-.helloworld:hover {
+.helloworld-dark:hover {
   animation: expand 0.5s ease forwards;
 }
 

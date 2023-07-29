@@ -17,13 +17,13 @@ const Contact = () => {
             <div className="col-span-1">
               <div className="grid grid-cols-5">
                 <span className='col-span-1' />
-                <Link href="https://github.com/RemyXVX" className="btn col-span-1 py-3 flex justify-center">
+                <Link href="https://github.com/RemyXVX" className="btn col-span-1 py-3 flex justify-center dark:text-slate-700">
                   <FaGithub className="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-10 xl:h-10" />
                 </Link>
-                <Link href="https://www.linkedin.com/in/remyflores/" className="btn col-span-1 py-3 flex justify-center">
+                <Link href="https://www.linkedin.com/in/remyflores/" className="btn col-span-1 py-3 flex justify-center dark:text-slate-700">
                   <FaLinkedin className="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-10 xl:h-10" />
                 </Link>
-                <Link href="https://www.instagram.com/youngglitterbearxvx/" className="btn col-span-1 py-3 flex justify-center">
+                <Link href="https://www.instagram.com/youngglitterbearxvx/" className="btn col-span-1 py-3 flex justify-center dark:text-slate-700">
                   <FaInstagram className="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-10 xl:h-10" />
                 </Link>
                 <span className='col-span-1' />

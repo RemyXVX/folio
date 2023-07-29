@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.helloworld {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25vmin;
+  line-height: 20vmin;
+  text-shadow: inset 0 5px 8px rgba(0, 0, 0, 0.5), 5px 0 10px rgba(0, 0, 0, 0.5), -2px 0 4px rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+  vertical-align: middle;
+  
+  color: transparent;
+  background: conic-gradient(
+    #000000 0%,
+    #707070 10%,
+    #FF69B4 10%,
+    #FFC0CB 30%,
+    #DBB2D9 30%,
+    #AEC6CF 50%,
+    #B5DEFF 50%,
+    #F7D1BA 70%,
+    #B9D3B0 70%,
+    #a7d399 90%,
+    #575757 90%
+  );
+  background-size: 60%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: expand-rev 0.9s ease forwards;
+
+  cursor: pointer;
+}
+
+@keyframes expand-rev {
+  0% {
+    background-size: 0 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+
+.helloworld:hover {
+  animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+  0% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+}
+
+@keyframes expand-rev {
+  0% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}

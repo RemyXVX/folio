@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Form = () => {
-  const email = process.env.NEXT_PUBLIC_EMAIL_REMY;
+  const email = "https://formsubmit.co/1ec482839cb75df9cc55985f43f6d4e7"
 
   return (
     <div className="container mx-auto">
       <div className="pb-2">
-        <h1 className="text-4xl font-bold">Contact:</h1>
-        <p className="text-xl font-light pb-2">shoot my line, or tell me a secret</p>
+        <h1 className="text-4xl font-bold dark:text-slate-700">Contact:</h1>
+        <p className="text-xl font-light pb-2 dark:text-slate-700">shoot my line, or tell me a secret</p>
       </div>
       <form
         target="_blank"
@@ -21,7 +21,7 @@ const Form = () => {
               <input
                 type="text"
                 name="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md dark:text-slate-700"
                 placeholder="Full Name"
                 required
               />
@@ -30,7 +30,7 @@ const Form = () => {
               <input
                 type="email"
                 name="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md dark:text-slate-700"
                 placeholder="Email Address"
                 required
               />
@@ -40,7 +40,7 @@ const Form = () => {
         <div className="mb-4">
           <textarea
             placeholder="Your Message"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md dark:text-slate-700"
             name="message"
             rows={10}
             required

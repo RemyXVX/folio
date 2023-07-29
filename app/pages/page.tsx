@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./../components/navbar";
 import Image from "next/image";
+import useDarkMode from "../components/useDarkMode";
 
 import helloworldLight from "./../assets/styles/helloworld-light.module.css";
 import helloworldDark from "./../assets/styles/helloworld-dark.module.css";
@@ -12,12 +13,7 @@ import Projects from "./projects/page";
 import Contacts from "./contact/page";
 
 const Secondary = () => {
-  const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode);
-
-  useEffect(() => {
-    setIsDarkMode(prefersDarkMode);
-  }, [prefersDarkMode]);
+  const isDarkMode = useDarkMode();
 
   return (
     <>

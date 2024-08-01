@@ -5,7 +5,7 @@ const Main = () => {
 
   return (
     <main>
-      <div className="border border-black p-2 md:p-4 lg:p-4">
+      <div className="">
         <Secondary />
       </div>
     </main>

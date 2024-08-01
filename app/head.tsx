@@ -1,7 +1,7 @@
 const Head = () => {
   return(
     <>
-      <title>RemyXVX</title>
+      <title>Remy DEV</title>
       <meta content='width=device-width, initial-scale=1' name="viewport" />
       <meta name="description" />
     </>

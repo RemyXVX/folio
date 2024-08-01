@@ -56,7 +56,6 @@ const Distro = () => {
         <Image
           src={images[currentImageIndex]}
           alt="carousel image"
-          layout="responsive"
           width={600}
           height={400}
         />

@@ -1,50 +1,60 @@
 'use client'
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./../components/navbar";
 import Image from "next/image";
+
 import useDarkMode from "../components/useDarkMode";
-
-import helloworldLight from "./../assets/styles/helloworld-light.module.css";
-import helloworldDark from "./../assets/styles/helloworld-dark.module.css";
-
 import itsMeImage from "./../assets/images/itme.png";
+
 import About from "./about/page";
 import Projects from "./projects/page";
 import Contacts from "./contact/page";
 
-const Secondary = () => {
+const Secondary: React.FC = () => {
   const isDarkMode = useDarkMode();
+  const [currentView, setCurrentView] = useState("home");
 
-  return (
-    <>
-      <div id="home" className="py-2 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-64">
-        <div className="bg-gray-100 dark:bg-slate-300 pt-3 rounded-3xl">
-            <Navbar />
-          <div className="justify-center">
-            <div>
-              <div className="max-w-3xl mx-auto px-4 py-2 sm:py-4 md:py-6">
-                <h1 id="gradient-text" className={isDarkMode ? helloworldDark["helloworld-dark"] : helloworldLight.helloworld}>
-                  hello world!
-                </h1>
-              </div>
-              <div className="max-w-3xl mx-auto px-4 py-2 sm:py-4 md:py-6">
-                <Image
-                  src={itsMeImage}
-                  alt="Artificial Intelligence made self portrait of me, a very brown person with long flowly hair and some dark rim glasses"
-                  priority={true}
-                  className="mx-auto rounded-full"
-                />
-              </div>
+  const renderContent = () => {
+    switch (currentView) {
+      case "about":
+        return <About />;
+      case "projects":
+        return <Projects />;
+      case "contact":
+        return <Contacts />;
+      default:
+        return (
+          <div className="flex flex-col items-center">
+            <div className="max-w-2xl mx-4 sm:mx-6 md:mx-8 lg:mx-16 p-4">
+              <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} text-center`}>
+                hello
+              </h2>
             </div>
-            <div className="text-center">
-              <About />
-              <Projects />
-              <Contacts />
+            <div className="max-w-3xl mx-4 sm:mx-6 md:mx-8 lg:mx-16 p-4">
+              <Image
+                src={itsMeImage}
+                alt="Artificial Intelligence made self portrait of me, a very brown person with long flowy hair and some dark rim glasses"
+                priority={true}
+                className="mx-auto rounded-full"
+              />
+            </div>
+            <div className="max-w-2xl mx-4 sm:mx-6 md:mx-8 lg:mx-16 p-4">
+              <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} text-center`}>
+                world
+              </h2>
             </div>
           </div>
-        </div>
+        );
+    }
+  };
+
+  return (
+    <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 min-h-screen flex flex-col">
+      <div className={`flex-1 bg-gray-100 dark:bg-slate-800 shadow-md`}>
+        <Navbar onMenuClick={setCurrentView} />
+        <div className="py-4">{renderContent()}</div>
       </div>
-    </>
+    </div>
   );
 };
 

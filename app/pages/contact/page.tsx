@@ -7,7 +7,6 @@ import Form from './form';
 const Contact = () => {
   return (
     <>
-      <div id="contact" className="text-left" />
       <div className="mt-14">
         <div className="max-w-3xl mx-auto px-1 py-1 sm:py-2 md:py-3">
           <div className="grid grid-col-2">

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Navbar from "./../components/navbar";
 import Image from "next/image";
 
-import useDarkMode from "../components/useDarkMode";
 import itsMeImage from "./../assets/images/itme.png";
 
 import About from "./about/page";
@@ -11,7 +10,6 @@ import Projects from "./projects/page";
 import Contacts from "./contact/page";
 
 const Secondary: React.FC = () => {
-  const isDarkMode = useDarkMode();
   const [currentView, setCurrentView] = useState("home");
 
   const renderContent = () => {
@@ -26,7 +24,7 @@ const Secondary: React.FC = () => {
         return (
           <div className="flex flex-col items-center">
             <div className="max-w-2xl mx-4 sm:mx-6 md:mx-8 lg:mx-16 p-4">
-              <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} text-center`}>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 text-center">
                 hello
               </h2>
             </div>
@@ -39,7 +37,7 @@ const Secondary: React.FC = () => {
               />
             </div>
             <div className="max-w-2xl mx-4 sm:mx-6 md:mx-8 lg:mx-16 p-4">
-              <h2 className={`text-2xl font-bold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} text-center`}>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 text-center">
                 world
               </h2>
             </div>
@@ -50,7 +48,7 @@ const Secondary: React.FC = () => {
 
   return (
     <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 min-h-screen flex flex-col">
-      <div className={`flex-1 bg-gray-100 dark:bg-slate-800 shadow-md`}>
+      <div className="flex-1 bg-gray-100 dark:bg-slate-800 shadow-md">
         <Navbar onMenuClick={setCurrentView} />
         <div className="py-4">{renderContent()}</div>
       </div>

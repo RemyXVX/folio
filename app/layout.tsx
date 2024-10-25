@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from './head';
+import Head from './components/head';
 
 import './assets/styles/globals.css';
 import { Inter } from 'next/font/google'

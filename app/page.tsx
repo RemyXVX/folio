@@ -5,9 +5,7 @@ const Main = () => {
 
   return (
     <main>
-      <div className="">
-        <Secondary />
-      </div>
+      <Secondary />
     </main>
   )
 }

@@ -23,21 +23,22 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   };
 
   return (
-    <nav className="bg-sky-800 dark:bg-slate-800 p-4 shadow-md relative">
-      <div className="container mx-auto flex items-center justify-between md:justify-evenly">
+    <nav className="bg-sky-800 dark:bg-slate-800 p-4 shadow-lg relative z-50">
+      <div className="container mx-auto flex items-center justify-between md:justify-evenly h-20">
         <Link href="/" passHref>
-          <span className="flex items-center">
+          <span className="flex items-center cursor-pointer">
             <Image
               src={corgiRamen}
-              className="w-auto h-auto max-h-12 max-w-full"
               alt="Corgi eating ramen logo"
+              priority={true}
+              className="h-14 w-auto rounded-full"
             />
           </span>
         </Link>
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 text-gray-500 dark:text-gray-300 rounded-lg md:hidden hover:bg-gray-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-slate-600"
+          className="inline-flex items-center p-2 text-gray-200 dark:text-gray-300 rounded-lg md:hidden hover:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none transition-colors duration-200"
           aria-controls="navbar-menu"
           aria-expanded={isMenuOpen ? 'true' : 'false'}
         >
@@ -45,33 +46,32 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
           {isMenuOpen ? (
             <svg
               className="w-6 h-6"
-              aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fillRule="evenodd"
                 d="M6 6L18 18M18 6L6 18"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              ></path>
+              />
             </svg>
           ) : (
             <svg
               className="w-6 h-6"
-              aria-hidden="true"
               fill="currentColor"
-              viewBox="0 0 20 20"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              ></path>
+                d="M3 5h18M3 12h18M3 19h18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           )}
         </button>
@@ -79,10 +79,9 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
           id="navbar-menu"
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } absolute top-full right-0 w-48 bg-sky-800 dark:bg-slate-800 rounded-b-lg shadow-xl md:shadow-none md:relative md:w-auto md:flex md:space-x-4`}
-          style={{ zIndex: 9999 }}
+          } absolute top-full right-0 mt-2 w-52 bg-sky-800 dark:bg-slate-800 rounded-lg shadow-lg md:shadow-none md:relative md:top-0 md:w-auto md:flex md:items-center md:space-x-6 transition-transform duration-300 ease-in-out`}
         >
-          <div className="flex flex-col md:flex-row md:space-x-4 p-2 md:p-0">
+          <div className="flex flex-col md:flex-row md:space-x-6 p-3 md:p-0">
             {menuList.map((item, index) => (
               <a
                 key={index}
@@ -91,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                   e.preventDefault();
                   onMenuClick(item.view);
                 }}
-                className="block py-2 px-4 rounded-sm font-medium text-gray-100 dark:text-gray-100 hover:bg-sky-600 dark:hover:bg-slate-700 md:hover:bg-transparent md:hover:text-gray-100 md:dark:hover:text-white"
+                className="block py-2 px-4 text-lg font-medium text-gray-100 hover:bg-sky-600 dark:hover:bg-slate-600 rounded-lg md:rounded-none md:hover:text-sky-400 dark:md:hover:text-gray-200 transition-all duration-200 ease-in-out"
               >
                 {item.text}
               </a>

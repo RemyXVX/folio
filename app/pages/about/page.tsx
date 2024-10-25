@@ -3,33 +3,34 @@ import TechStack from "./TechStack";
 
 const About = () => {
   return (
-    <>
-    <div>
-      <div className="mt-14">
-        <div className="max-w-3xl mx-auto px-1 py-1 sm:py-2 md:py-3">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 dark:text-slate-700">
-            Welcome!
-          </h1>
-          <div>
-            <div>
-              <h2 className="text-gray-700 text-lg sm:text-xl md:text-2xl font-medium mb-1">
-                My name is Remy
-              </h2>
-              <p className="text-gray-700 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-1">
-                And allow me to introduce myself as a developer extraordinaire! With an unwavering passion for crafting innovative solutions, I possess an innate ability to build projects from the ground up. Seamlessly blending front-end wizardry with cutting-edge and interactive UI, I orchestrate a symphony of features driven by my back-end prowess. Equipped with a versatile skill set encompassing ReactJS, NodeJS, and Asp.Net Core, I breathe life into dynamic applications, crafting digital marvels with utmost finesse. Join me on an exhilarating journey where innovation and functionality harmoniously intertwine!
-              </p>
-            </div>
-            <div className="pt-4">
-              <h2 className="text-4xl font-bold pb-4 dark:text-slate-700">Tech Stack</h2>
-              <div className="">
-                <TechStack />
-              </div>
-            </div>
-          </div>
+    <div className="flex flex-col items-center justify-center bg-gray-100 dark:bg-slate-800">
+      <div className="w-full max-w-screen-xl bg-gray-100 dark:bg-slate-800 py-2 px-4 rounded-lg">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-2 text-gray-900 dark:text-slate-200 text-center">
+          Hi! Welcome
+        </h1>
+        <div className="bg-white dark:bg-slate-700 p-2 rounded-lg shadow-lg space-y-2">
+          <h2 className="text-gray-700 dark:text-slate-300 text-lg sm:text-xl md:text-2xl font-semibold">
+            How are y'all doing? I'm Remy
+          </h2>
+          <p className="text-gray-700 dark:text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed">
+          Let me break it down – I'm a developer who loves to create things
+            that work, flow, and look cute. I bring front-end magic to life with
+            interactive UIs and back-end muscle to handle the heavy lifting.
+            From ReactJS and NodeJS to ASP.NET Core, I’m out here building apps
+            that not only get the job done but leave a mark. Stick around, and
+            let's cook up something that blends tech with a fresh vibe.
+          </p>
+        </div>
+      </div>
+      <div className="w-full max-w-screen-xl bg-gray-100 dark:bg-slate-800 py-2 px-4 rounded-lg">
+        <h2 className="text-4xl font-extrabold text-gray-900 dark:text-slate-200 text-center pb-4">
+          My Tech Stack
+        </h2>
+        <div className="max-h-64 overflow-y-auto bg-white dark:bg-slate-700 p-6 rounded-lg shadow-lg">
+          <TechStack />
         </div>
       </div>
     </div>
-  </>
   );
 };
 

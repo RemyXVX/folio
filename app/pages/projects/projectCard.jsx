@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Image from 'next/image';
 
-const ProjectCard = ({ title, description, images, codeLink, liveLink }) => {
+const ProjectCard = ({ title, description, images = [], codeLink, liveLink }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const prevImage = () => {
@@ -26,28 +26,32 @@ const ProjectCard = ({ title, description, images, codeLink, liveLink }) => {
     <div className="flex flex-col bg-white p-6 sm:p-8 rounded-lg shadow-lg">
       {/* Carousel */}
       <div className="relative" {...handlers}>
-        <button
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
-          onClick={prevImage}
-        >
-          Previous
-        </button>
-
-        <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
-          onClick={nextImage}
-        >
-          Next
-        </button>
-
-        <div className="mx-auto">
-          <Image
-            src={images[currentImageIndex].src}
-            alt={images[currentImageIndex].alt}
-            width={600}
-            height={400}
-          />
-        </div>
+        {images.length > 0 ? (
+          <>
+            <button
+              className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
+              onClick={prevImage}
+            >
+              Previous
+            </button>
+            <button
+              className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
+              onClick={nextImage}
+            >
+              Next
+            </button>
+            <div className="mx-auto">
+              <Image
+                src={images[currentImageIndex].src}
+                alt={images[currentImageIndex].alt}
+                width={600}
+                height={400}
+              />
+            </div>
+          </>
+        ) : (
+          <p>No images available</p>
+        )}
       </div>
 
       {/* Project Description */}

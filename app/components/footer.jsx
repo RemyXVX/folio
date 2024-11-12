@@ -1,21 +1,20 @@
 'use client';
-import React from 'react';
 import SocialMediaLinks from './../components/socialMediaLinks';
 
 const Footer = ({ setCurrentView }) => {
   return (
-    <footer className="min-h-[230px] bg-gray-900 text-gray-300 mt-2 py-6">
+    <footer className="bg-gray-900 text-gray-300 py-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h2 className="text-xl font-semibold text-gray-100 mb-4">About Me</h2>
-            <p className="text-xs">
+            <p className="text-sm">
               I'm Remy, a passionate full-stack developer building user-friendly applications. Specializing in React, Node.js, and ASP.NET Core.
             </p>
           </div>
           <div>
             <h2 className="text-xl font-semibold text-gray-100 mb-4">Quick Links</h2>
-            <ul className="text-xs space-y-2">
+            <ul className="text-sm space-y-2">
               <li>
                 <button
                   type="button"

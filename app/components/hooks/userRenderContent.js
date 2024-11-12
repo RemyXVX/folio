@@ -1,5 +1,3 @@
-// hooks/useRenderContent.jsx
-import React from 'react';
 import About from './../../pages/about/page';
 import Projects from './../../pages/projects/page';
 import Contacts from './../../pages/contact/page';
@@ -7,8 +5,7 @@ import Home from './../../pages/home/page';
 
 const useRenderContent = (currentView) => {
   const renderContent = () => {
-    // Apply consistent container styles for each page
-    const containerClass = " w-full h-full min-h-fit max-w-fit mx-auto bg-gray-100 dark:bg-slate-800";
+    const containerClass = "mx-auto bg-gray-100 dark:bg-slate-800 py-4";
 
     switch (currentView) {
       case "about":

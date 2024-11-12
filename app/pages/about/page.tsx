@@ -13,7 +13,7 @@ const About = () => {
             How are y'all doing? I'm Remy
           </h2>
           <p className="text-gray-700 dark:text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed">
-          Let me break it down – I'm a developer who loves to create things
+            Let me break it down – I'm a developer who loves to create things
             that work, flow, and look cute. I bring front-end magic to life with
             interactive UIs and back-end muscle to handle the heavy lifting.
             From ReactJS and NodeJS to ASP.NET Core, I’m out here building apps

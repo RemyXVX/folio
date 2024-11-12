@@ -10,6 +10,8 @@
     "open": "open http//localhost:3000"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@next/env": "^15.0.3",
     "autoprefixer": "10.4.14",
     "eslint-config-next": "13.4.6",
     "framer-motion": "^11.11.9",
@@ -17,6 +19,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.13.0",
     "react-swipeable": "^7.0.1",
+    "react-toastify": "^10.0.6",
     "sharp": "^0.33.4",
     "styled-components": "^5.3.11",
     "tailwindcss": "3.3.2"

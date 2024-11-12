@@ -10,17 +10,12 @@ const Secondary = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-slate-800">
-      {/* Navbar with a fixed height to ensure consistent layout */}
       <div className="flex-shrink-0">
         <Navbar onMenuClick={setCurrentView} />
       </div>
-
-      {/* Main content area grows to take up available space */}
       <div className="flex-grow overflow-auto">
         {renderContent()}
       </div>
-
-      {/* Footer with a fixed height to ensure consistent layout */}
       <div className="flex-shrink-0">
         <Footer setCurrentView={setCurrentView} />
       </div>

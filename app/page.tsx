@@ -1,4 +1,3 @@
-import React from "react";
 import Secondary from "./pages/page";
 
 const Main = () => {

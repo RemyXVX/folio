@@ -12,8 +12,8 @@ const Home = () => {
           alt="AI made self portrait of me"
           priority={true}
           className="rounded-full shadow-2xl object-cover"
-          width={525}
-          height={525}
+          width={515}
+          height={515}
           style={{ maxWidth: '100%', height: 'auto' }}
         />
       </div>

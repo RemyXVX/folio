@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import corgiRamen from './../assets/images/corgiramen.png';
-import useStoredState from './hooks/saveState';
 
 interface NavbarProps {
   onMenuClick: (view: string) => void;
@@ -18,7 +17,6 @@ const menuList = [
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [lastPage, setLastPage] = useStoredState<string>('lastPage', '/');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,19 +40,12 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    setLastPage(window.location.pathname);
-    setIsMenuOpen(false);
-  }, [setLastPage]);
-
   const handleLinkClick = (view: string) => {
-    setLastPage(view);
     onMenuClick(view);
     setIsMenuOpen(false);
   };
 
   const handleHomeClick = () => {
-    setLastPage('/');
     onMenuClick('home');
     setIsMenuOpen(false);
   };

@@ -31,6 +31,6 @@
   "description": "Person Portfolio",
   "devDependencies": {
     "@types/node": "20.4.0",
-    "@types/react": "18.2.13"
+    "@types/react": "^18.2.13"
   }
 }

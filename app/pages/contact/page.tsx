@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import FormEmail from './formEmail';
-import SocialMediaLinks from './../../components/socialMediaLinks';
 
 const Contact = () => {
   return (
@@ -11,10 +10,6 @@ const Contact = () => {
           <FormEmail />
         </div>
       </div>
-      {/* <div className="flex flex-col items-center justify-center mx-4">
-        <h2 className="text-2xl font-bold mb-6 dark:text-slate-200">Connect with me</h2>
-        <SocialMediaLinks />
-      </div> */}
     </div>
   );
 };

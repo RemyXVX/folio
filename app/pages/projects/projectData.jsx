@@ -15,7 +15,28 @@ import coffeelogin from '../../assets/images/coffeecarousel/coffeelogin.jpg';
 // Brainey Tutoring image
 // import brainytutoringmockup from './assets/images/mockup.jpg';
 
+// CheckVibe image
+// import checkvibemockup from './assets/images/mockup.jpg';
+
 const projectsData = [
+  {
+    title: 'CheckVibe',
+    description: 'CheckVibe is a platform that allows users to add tasks, set deadlines, and track their progress. Built with JavaScript, Tailwind CSS, it offers a clean and intuitive interface for users to manage their daily tasks and stay organized.',
+    images: [
+      // { src: checkvibemockup, alt: 'CheckVibe Mockup' }
+    ],
+    codeLink: 'https://github.com/RemyXVX/ToDoV2',
+    liveLink: 'https://checkvibe.link'
+  },
+  {
+    title: 'Brainey Tutoring',
+    description: 'Brainey Tutoring is an online platform designed to provide personalized tutoring services. Built with React and Node.js, it allows users to book sessions, manage schedules, and offers an intuitive interface for students and tutors alike.',
+    images: [
+      // { src: brainytutoringmockup, alt: 'Brainey Tutoring Mockup' }
+    ],
+    codeLink: 'https://github.com/RemyXVX/brainey-tutoring',
+    liveLink: 'https://www.braineytutoring.com/'
+  },
   {
     title: 'Pizzapalo',
     description: 'Pizzapalo is a responsive web application designed for pizza shops, offering users a seamless pizza customization experience. Built with Vite, React, and Tailwind CSS, it showcases dynamic and user-friendly interfaces for an enhanced pizza ordering process.',
@@ -42,15 +63,6 @@ const projectsData = [
     codeLink: 'https://github.com/RemyXVX/Doomed-Coffe-Shop',
     liveLink: 'https://doomed-coffe-shop-gzhiv7zfe-remyxvxs-projects.vercel.app/'
   },
-  {
-    title: 'Brainey Tutoring',
-    description: 'Brainey Tutoring is an online platform designed to provide personalized tutoring services. Built with React and Node.js, it allows users to book sessions, manage schedules, and offers an intuitive interface for students and tutors alike.',
-    images: [
-      // { src: brainytutoringmockup, alt: 'Brainey Tutoring Mockup' }
-    ],
-    codeLink: 'https://github.com/RemyXVX/brainey-tutoring',
-    liveLink: ''
-  }
 ];
 
 export default projectsData;

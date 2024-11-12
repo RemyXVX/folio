@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             id="navbar-menu"
             className={`absolute top-16 md:top-auto left-0 right-0 md:relative md:flex md:items-center bg-sky-800 dark:bg-slate-800 md:bg-transparent transition-all duration-300 ease-in-out ${
               isMenuOpen ? 'block' : 'hidden'
-            } md:block`}
+            } md:block z-10`}
           >
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 p-4 md:p-0">
               {menuList.map((item, index) => (

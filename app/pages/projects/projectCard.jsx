@@ -24,23 +24,46 @@ const ProjectCard = ({ title, description, images = [], codeLink, liveLink }) =>
 
   return (
     <div className="flex flex-col bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-      {/* Carousel */}
       <div className="relative" {...handlers}>
         {images.length > 0 ? (
           <>
             <button
-              className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
+              className="absolute top-1/2 left-0 transform -translate-y-1/2 text-green-300 rounded p-2 z-auto"
               onClick={prevImage}
             >
-              Previous
+              <svg
+                className="w-6 h-6 fill-current"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 4l-8 8 8 8"
+                />
+              </svg>
             </button>
             <button
-              className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white rounded p-2 z-10"
+              className="absolute top-1/2 right-0 transform -translate-y-1/2 text-green-300 rounded p-2 z-auto"
               onClick={nextImage}
             >
-              Next
+              <svg
+                className="w-6 h-6 fill-current"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 4l8 8-8 8"
+                />
+              </svg>
             </button>
-            <div className="mx-auto">
+            <div className="mx-auto z-auto">
               <Image
                 src={images[currentImageIndex].src}
                 alt={images[currentImageIndex].alt}
@@ -54,7 +77,6 @@ const ProjectCard = ({ title, description, images = [], codeLink, liveLink }) =>
         )}
       </div>
 
-      {/* Project Description */}
       <div className="flex flex-col flex-grow justify-between pt-6">
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 py-4">{title}</h2>

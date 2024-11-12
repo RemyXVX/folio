@@ -1,23 +1,23 @@
-import { useEffect } from 'react';
-import { useStoredState } from './saveState';
-import { useHistory, useLocation } from 'react-router-dom';
+// import { useEffect } from 'react';
+// import { useStoredState } from './saveState';
+// import { useHistory, useLocation } from 'react-router-dom';
 
-function useLastPage() {
-  const [lastPage, setLastPage] = useStoredState<string>('lastPage', '/');
-  const history = useHistory();
-  const location = useLocation();
+// function useLastPage() {
+//   const [lastPage, setLastPage] = useStoredState<string>('lastPage', '/');
+//   const history = useHistory();
+//   const location = useLocation();
 
-  useEffect(() => {
-    setLastPage(location.pathname);
-  }, [location.pathname, setLastPage]);
+//   useEffect(() => {
+//     setLastPage(location.pathname);
+//   }, [location.pathname, setLastPage]);
 
-  useEffect(() => {
-    if (lastPage && lastPage !== location.pathname) {
-      history.push(lastPage);
-    }
-  }, [lastPage, history, location.pathname]);
+//   useEffect(() => {
+//     if (lastPage && lastPage !== location.pathname) {
+//       history.push(lastPage);
+//     }
+//   }, [lastPage, history, location.pathname]);
 
-  return setLastPage;
-}
+//   return setLastPage;
+// }
 
-export default useLastPage;
+// export default useLastPage;
